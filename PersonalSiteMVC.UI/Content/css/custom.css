@@ -1,0 +1,75 @@
+﻿body {
+}
+
+#LogoImg {
+    margin-left: -30px;
+}
+
+.contactBox .form-control {
+    background-color: white;
+    color: black;
+}
+
+.classPicture {
+   
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.nav-color{
+    color: white;
+    font-size: 20px;
+}
+
+nav a:hover{
+    color: coral;
+}
+
+.nav-link:hover{
+    color:coral;
+}
+
+
+/*nav drop down*/
+.dropdown {
+    color: #006868;
+}
+
+    .dropdown .dropbtn {
+        /*font-size: 16px;*/
+        border: none;
+        outline: none;
+        color: white;
+        
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+
+.dropbtn:hover {
+    color: coral;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+  
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        float: none;
+        /*color: black;*/
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+    }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

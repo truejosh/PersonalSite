@@ -1,0 +1,82 @@
+﻿@model PersonalSiteMVC.UI.Models.ContactViewModel
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+
+    <div class="parallax-window tm-services-parallax-header tm-testimonials-parallax-header"
+         data-parallax="scroll"
+         data-z-index="101"
+         data-image-src="../Content/img/background/DJI_0075.JPG">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="tm-bg-transparent  tm-services-header tm-testimonials-header" style="color:white">
+            <h2 class="text-uppercase mb-3 tm-app-feature-header text-center">Contact</h2>
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-12">
+                        <div class="contactBox">
+                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+               
+                    <div class="contactBox col-md-12">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+               
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-12">
+                    <div class="contactBox">
+                        @Html.EditorFor(model => model.Subject, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-12">
+                    <div class="contactBox">
+                        @Html.EditorFor(model => model.Message, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Message, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="col-md-offset-2 col-md-12">
+                    <input type="submit" value="Send Message" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@if (ViewBag.CustomerMessage != null)
+{
+    @* @Html.Raw() will render any HTML rather than display it as plain text *@
+    <h4>@Html.Raw(ViewBag.CustomerMessage)</h4>
+}
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
