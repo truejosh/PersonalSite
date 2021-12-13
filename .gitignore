@@ -260,4 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 
-AppSecretKeys.config
+/PersonalSiteMVC.UI/configs/AppSecretKeys.config
+
