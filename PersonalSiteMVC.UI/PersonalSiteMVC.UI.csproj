@@ -229,6 +229,7 @@
     <Content Include="Content\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\site.webmanifest" />
     <Content Include="Content\Resume.pdf" />
+    <Content Include="configs\AppSecretKeys.config" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -296,7 +297,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="configs\" />
     <Folder Include="_Archive\img\About\" />
     <Folder Include="_Archive\img\Classmates\" />
     <Folder Include="_Archive\img\Contact\" />
